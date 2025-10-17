@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Andrea Carolina Hinojosa Trujillo</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; }
+body { background:#f5f6fa; color:#333; scroll-behavior: smooth; }
+
+/* Sidebar */
+.container-main { display:flex; min-height:100vh; }
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #7e8ef1, #c084fc);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  position: fixed;
+  height: 100%;
+}
+
+/* Foto de perfil */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+.profile-pic:hover img {
+    transform: scale(2.1);
+}
+
+.sidebar h1 { font-size:20px; text-align:center; margin-bottom:10px; }
+.sidebar p { font-size:13px; margin-bottom:5px; text-align:center; }
+
+/* Content */
+.content { margin-left: 260px; padding:50px; flex:1; }
+section { margin-bottom:80px; opacity:0; transform:translateY(30px); animation:fadeSlide 0.8s forwards; padding-bottom:40px; border-bottom: 1px solid #ccc; }
+section:nth-child(1) { animation-delay:0.2s; }
+section:nth-child(2) { animation-delay:0.4s; }
+section:nth-child(3) { animation-delay:0.6s; }
+section:nth-child(4) { animation-delay:0.8s; }
+section:nth-child(5) { animation-delay:1s; }
+
+@keyframes fadeSlide { to { opacity:1; transform:translateY(0); } }
+
+h2 { color:#7e8ef1; margin-bottom:20px; }
+
+/* Proyectos */
+.project { margin-bottom:40px; transition: transform 0.4s, box-shadow 0.4s; }
+
+/* Tamaño fijo para los carruseles */
+.carousel-inner {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    opacity:0; 
+    transform:translateY(20px); 
+    animation:fadeSlide 0.8s forwards; 
+    animation-delay:0.5s;
+}
+
+.carousel-inner img,
+.carousel-inner video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* sin fondo */
+    background-size: 100%, 100%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23c084fc' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+
+.carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23c084fc' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container-main">
+<div class="sidebar">
+    <div class="profile-pic">
+        <img src="images/pp.png" alt="Andrea Carolina Hinojosa Trujillo">
+    </div>
+    <h1>Andrea Carolina Hinojosa Trujillo</h1>
+    <p><strong>Portafolio</strong></p>
+    <p>0269206@gmail.com</p>
+    <p>7713810889</p>
+    <p>Guadalajara, México</p>
+</div>
+
+<div class="content">
+    <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+
+        <!-- Proyecto 1 -->
+        <div class="project">
+            <h3>Punto Muerto - Corto animado (2025)</h3>
+            <p>Modelado del personaje rojo con casco, iluminación de escenas, animación de cámara y producción general. Software: Autodesk Maya y 3dsMax.</p>
+            <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video controls>
+                            <source src="images/Punto Muerto/ExamenFinal_Corto_Indigo.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Punto Muerto/toma260061.jpg" alt="Toma26">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Punto Muerto/toma50000.jpg" alt="Toma50">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Punto Muerto/Connor Virtual(3).png" alt="Wireframe">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Punto Muerto/toma130030.jpg" alt="Toma13">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project">
+            <h3>Cuento de hadas - Proyección 3D de escenario (2024)</h3>
+            <p>Creación de escenario exterior con iluminación física y materiales realistas. Software: Maya, Photoshop,Adobe Effects,Nuke.</p>
+            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video controls>
+                            <source src="images/Cuento de hadas/Breakdown.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Cuento de hadas/Showcase.png" alt="Showcase">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="project">
+            <h3>Sala de Bender - Modelo 3D de escenario (2024)</h3>
+            <p>Escenario interior de la Sala de Bender enfocada en proporciones y topología limpia. Software: Autodesk Maya.</p>
+            <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/Sala de Bender/Modelado_SalaBender_01.png" alt="SalaBender">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Sala de Bender/Modelado_SalaBender_02.png" alt="SalaBender">
+                    </div>
+                     <div class="carousel-item">
+                        <img src="images/Sala de Bender/wireframe_01.png" alt="SalaBender_Wireframe">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Sala de Bender/wireframe_02.png" alt="SalaBender_Wireframe">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Sala de Bender/wireframe_03.png" alt="SalaBender_Wireframe">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="project">
+            <h3>Sable de luz Star Wars - Modelo 3D (2025)</h3>
+            <p>Modelado y render de objeto con materiales metálicos. Software: Autodesk Maya, Substance Painter.</p>
+            <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/Sable de luz/Resultado_Final.jpg" alt="Sable de luz">
+                    </div>
+                    <div class="carousel-item">
+                       <video controls>
+                            <source src="images/Sable de luz/playblast01.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Sable de luz/sablev01.png" alt="Sable de luz">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Proyecto 5 -->
+        <div class="project">
+            <h3>Renders experimentales (2025)</h3>
+            <p>Exploración de iluminación, texturizado y composición 3D aplicados a personajes y objetos. Experimentos en materiales y atmósfera para potenciar el estilo visual. Software: 3ds Max</p>
+            <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/Renders/Elementos.png" alt="Render 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/Renders/Caballero en castillo.png" alt="Render 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next black-color" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
